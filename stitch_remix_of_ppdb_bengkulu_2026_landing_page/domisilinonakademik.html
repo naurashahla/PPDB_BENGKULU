@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zonasi Selection - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1E3A8A",
+                        accent: "#1E3A8A",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a"
+                    },
+                    fontFamily: {
+                        display: "Inter"
+                    }
+                }
+            }
+        };
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .map-overlay-circle {
+            border: 2px dashed rgba(30, 58, 138, 0.3);
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .school-card-active {
+            @apply ring-2 ring-primary bg-blue-50/50 border-primary;
+        }
+        .school-label {
+            text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300 overflow-hidden h-screen flex flex-col">
+<header class="relative z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 md:px-20 lg:px-40 py-4">
+<div class="flex items-center justify-between whitespace-nowrap">
+<a href="index.html" class="flex items-center gap-4 text-[#111318] dark:text-white hover:opacity-80 transition-opacity">
+<div class="h-10 w-auto">
+<img alt="Logo Bengkulu" class="h-full object-contain" src="images/BENGKULU.png"" />
+</div>
+<div class="flex flex-col">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">PPDB Bengkulu 2026</h2>
+<span class="text-[9px] uppercase font-bold text-gray-500 dark:text-gray-400 tracking-wider">Dinas Pendidikan &amp; Kebudayaan</span>
+</div>
+</a>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-3 mr-4 border-r border-gray-200 dark:border-gray-700 pr-6">
+<!-- <span class="text-xs font-semibold text-gray-400">STATUS PESERTA</span>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold border border-blue-100">
+<span class="size-2 bg-blue-500 rounded-full animate-pulse"></span> TERVERIFIKASI
+                    </span> -->
+</div>
+<button class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex overflow-hidden">
+<div class="flex-1 relative bg-slate-200 overflow-hidden">
+<div class="absolute inset-0 bg-[#e5e7eb] opacity-50 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative z-20">
+<div class="absolute -top-12 -left-6 bg-white px-3 py-1 rounded shadow-lg text-[10px] font-bold border border-slate-200 whitespace-nowrap">
+                        Lokasi Rumah (Domisili)
+                    </div>
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-md select-none" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary/30 rounded-full animate-ping"></div>
+</div>
+<div class="map-overlay-circle w-[200px] h-[200px] bg-primary/5"></div>
+<div class="map-overlay-circle w-[400px] h-[400px] bg-primary/5"></div>
+<div class="map-overlay-circle w-[600px] h-[600px] bg-primary/5"></div>
+<div class="absolute top-[35%] left-[42%] text-[10px] text-blue-700 font-bold bg-white/80 px-2 rounded-full border border-blue-200">500m</div>
+<div class="absolute top-[25%] left-[38%] text-[10px] text-blue-700 font-bold bg-white/80 px-2 rounded-full border border-blue-200">1km</div>
+<div class="absolute top-[15%] left-[34%] text-[10px] text-blue-700 font-bold bg-white/80 px-2 rounded-full border border-blue-200">2km</div>
+<div class="absolute top-1/4 left-2/3 group cursor-pointer flex items-center">
+<span class="material-symbols-outlined text-primary text-3xl hover:scale-125 transition-transform" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="school-label ml-2 bg-white/60 backdrop-blur-[2px] px-2 py-0.5 rounded border border-white/80 text-[11px] font-bold text-primary shadow-sm whitespace-nowrap">SMAN 1 Kota Bengkulu</span>
+</div>
+<div class="absolute bottom-1/3 left-1/4 group cursor-pointer flex items-center">
+<span class="material-symbols-outlined text-primary text-3xl hover:scale-125 transition-transform" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="school-label ml-2 bg-white/60 backdrop-blur-[2px] px-2 py-0.5 rounded border border-white/80 text-[11px] font-bold text-primary shadow-sm whitespace-nowrap">SMAN 5 Kota Bengkulu</span>
+</div>
+</div>
+<div class="absolute top-6 left-6 flex flex-col gap-2">
+<div class="bg-white p-2 rounded-lg shadow-xl border border-slate-200 flex flex-col gap-1">
+<button class="size-8 flex items-center justify-center hover:bg-slate-100 rounded text-slate-600"><span class="material-symbols-outlined">add</span></button>
+<div class="h-px bg-slate-100 mx-1"></div>
+<button class="size-8 flex items-center justify-center hover:bg-slate-100 rounded text-slate-600"><span class="material-symbols-outlined">remove</span></button>
+</div>
+<button class="bg-white p-2 rounded-lg shadow-xl border border-slate-200 size-10 flex items-center justify-center text-slate-600 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-xl border border-slate-200 w-64">
+<h4 class="text-xs font-bold text-slate-500 uppercase mb-3">Keterangan Peta</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-xs text-slate-700 font-medium">Titik Lokasi Rumah Anda</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="text-xs text-slate-700 font-medium">Lokasi Sekolah</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-4 rounded-full border-2 border-dashed border-blue-300 bg-blue-100/30"></div>
+<span class="text-xs text-slate-700 font-medium">Radius Zonasi (Pusat: Rumah)</span>
+</div>
+</div>
+<button class="mt-4 w-full bg-slate-800 text-white text-[11px] font-bold py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                    Verifikasi Titik Koordinat
+                </button>
+</div>
+</div>
+<div class="w-[420px] bg-white border-l border-slate-200 flex flex-col shadow-2xl z-40">
+<div class="p-6 border-b border-slate-100">
+<h3 class="text-xl font-black text-slate-900 leading-tight">Domisili Non-Akademik</h3>
+<p class="text-sm text-slate-500 mt-1 italic">Kecamatan: Gading Cempaka, Kota Bengkulu</p>
+<div class="mt-6 bg-blue-50 border border-blue-100 rounded-xl p-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-blue-700 uppercase">Pilihan Anda</span>
+<span class="text-[10px] font-bold px-2 py-0.5 bg-blue-600 text-white rounded-full">2 / 5</span>
+</div>
+<p class="text-[11px] text-blue-600/80 leading-snug">Pilihlah hingga 5 sekolah dalam radius terdekat untuk memperbesar peluang kelulusan.</p>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-6 space-y-4 scrollbar-hide">
+<div class="school-card-active border border-slate-200 rounded-xl p-4 relative">
+<div class="absolute -top-2 -left-2 size-6 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-lg border-2 border-white">1</div>
+<div class="flex justify-between items-start mb-3">
+<div>
+<h4 class="font-bold text-slate-900">SMAN 1 Kota Bengkulu</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">straighten</span>
+<span class="text-xs font-bold text-emerald-700">452 meter</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="flex gap-2">
+<span class="text-[9px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded uppercase">Akreditasi A</span>
+<span class="text-[9px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded uppercase">Kuota: 120</span>
+</div>
+</div>
+<div class="school-card-active border border-slate-200 rounded-xl p-4 relative">
+<div class="absolute -top-2 -left-2 size-6 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-lg border-2 border-white">2</div>
+<div class="flex justify-between items-start mb-3">
+<div>
+<h4 class="font-bold text-slate-900">SMAN 5 Kota Bengkulu</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">straighten</span>
+<span class="text-xs font-bold text-emerald-700">1.2 km</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="flex gap-2">
+<span class="text-[9px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded uppercase">Akreditasi A</span>
+<span class="text-[9px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 rounded uppercase">Kuota: 95</span>
+</div>
+</div>
+<div class="border-2 border-dashed border-slate-200 rounded-xl p-4 flex flex-col items-center justify-center gap-2 group cursor-pointer hover:border-accent/50 hover:bg-slate-50 transition-all">
+<div class="size-8 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+<p class="text-xs font-medium text-slate-400">Klik sekolah di peta atau cari di daftar</p>
+</div>
+<div class="pt-4">
+<h5 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Sekolah Lain di Sekitar</h5>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 border border-slate-100 rounded-lg hover:bg-slate-50 cursor-pointer">
+<div>
+<p class="text-sm font-bold text-slate-700">SMAN 2 Kota Bengkulu</p>
+<p class="text-[10px] text-slate-500 italic">2.4 km dari lokasi anda</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">add_circle</span>
+</div>
+<div class="flex items-center justify-between p-3 border border-slate-100 rounded-lg hover:bg-slate-50 cursor-pointer">
+<div>
+<p class="text-sm font-bold text-slate-700">SMAN 7 Kota Bengkulu</p>
+<p class="text-[10px] text-slate-500 italic">3.1 km dari lokasi anda</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">add_circle</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-slate-200 bg-white shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-3 mb-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" id="confirm" type="checkbox"/>
+<label class="text-[11px] leading-tight text-slate-600 font-medium italic" for="confirm">
+                        Saya menyatakan titik koordinat rumah saya sudah benar &amp; sesuai dengan KK.
+                    </label>
+</div>
+<a href="unggahdomisili.html" class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
+                    Simpan &amp; Lanjutkan Seleksi
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a href="jalurdomisili.html" class="w-full mt-3 text-slate-500 font-bold text-[11px] hover:text-slate-700 transition-colors uppercase tracking-tight">
+                    Ganti Jalur Pendaftaran
+</a>
+</div>
+</div>
+</main>
+<footer class="bg-slate-900 text-slate-400 py-3 px-6 shrink-0 flex justify-between items-center text-[11px] border-t border-slate-800">
+<p>© 2026 Dinas Pendidikan &amp; Kebudayaan Provinsi Bengkulu.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-1.5"><span class="size-2 bg-emerald-500 rounded-full"></span> GPS Aktif</span>
+<span class="flex items-center gap-1.5 text-slate-500">Bantuan (0821-xxxx-xxxx)</span>
+</div>
+</footer>
+
+</body></html>

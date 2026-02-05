@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Unggah Berkas Mutasi - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1E3A8A",
+                        "navy-900": "#0f1323",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1323"
+                    },
+                    fontFamily: {
+                        display: "Inter"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        full: "9999px"
+                    }
+                }
+            }
+        };
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .stepper-item.active .step-circle {
+            @apply bg-primary text-white ring-4 ring-primary/20;
+        }
+        .stepper-item.completed .step-circle {
+            @apply bg-primary text-white;
+        }
+        .upload-zone {
+            @apply border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-2xl p-8 transition-all hover:border-primary hover:bg-primary/5 flex flex-col items-center justify-center text-center cursor-pointer;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="relative z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 md:px-20 lg:px-40 py-4">
+<div class="flex items-center justify-between whitespace-nowrap">
+<a href="index.html" class="flex items-center gap-4 text-[#111318] dark:text-white hover:opacity-80 transition-opacity">
+<div class="h-10 w-auto">
+<img alt="Logo Bengkulu" class="h-full object-contain" src="images/BENGKULU.png" />
+</div>
+<div class="flex flex-col">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">PPDB Bengkulu 2026</h2>
+<span class="text-[9px] uppercase font-bold text-gray-500 dark:text-gray-400 tracking-wider">Dinas Pendidikan &amp; Kebudayaan</span>
+</div>
+</a>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-3 mr-4 border-r border-gray-200 dark:border-gray-700 pr-6">
+<!-- <span class="text-xs font-semibold text-gray-400">STATUS PESERTA</span>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">
+<span class="size-2 bg-blue-600 rounded-full animate-pulse"></span> TERVERIFIKASI
+                    </span> -->
+</div>
+<button class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col py-8 px-4 md:px-20 lg:px-40">
+<div class="max-w-[1200px] mx-auto w-full">
+<div class="flex items-center justify-center mb-12">
+<div class="flex items-center w-full max-w-3xl">
+<div class="stepper-item completed flex flex-col items-center flex-1 relative">
+<div class="step-circle size-10 rounded-full flex items-center justify-center font-bold mb-2">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<span class="text-xs font-bold text-gray-500 uppercase tracking-tighter">Pilih Kategori</span>
+<div class="absolute top-5 left-1/2 w-full h-1 bg-green-500 -z-10"></div>
+</div>
+<div class="stepper-item active flex flex-col items-center flex-1 relative">
+<div class="step-circle size-10 rounded-full flex items-center justify-center font-bold mb-2 border-2 border-primary bg-white dark:bg-gray-800 text-primary">2</div>
+<span class="text-xs font-bold text-primary uppercase tracking-tighter">Unggah Berkas</span>
+<div class="absolute top-5 left-1/2 w-full h-1 bg-gray-200 dark:bg-gray-700 -z-10"></div>
+</div>
+<div class="stepper-item flex flex-col items-center flex-1">
+<div class="step-circle size-10 rounded-full flex items-center justify-center font-bold mb-2 border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-400">3</div>
+<span class="text-xs font-bold text-gray-400 uppercase tracking-tighter">Review</span>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h1 class="text-3xl font-black text-[#111318] dark:text-white">Unggah Berkas Persyaratan</h1>
+<p class="text-gray-500 dark:text-gray-400 mt-2">Lengkapi data dan dokumen untuk verifikasi Jalur Pindah Tugas Orang Tua.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<div class="size-12 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">assignment</span>
+</div>
+<div>
+<h2 class="text-xl font-bold dark:text-white">Surat Penugasan / SK Mutasi</h2>
+<p class="text-sm text-gray-500">Informasi detail mengenai surat keputusan perpindahan tugas.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="space-y-2">
+<label class="text-sm font-bold text-gray-700 dark:text-gray-300">Nomor Surat</label>
+<input class="w-full px-4 py-3 rounded-xl border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 focus:ring-primary focus:border-primary" placeholder="Contoh: 800/123/DISDIK/2025" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-gray-700 dark:text-gray-300">Tanggal Terbit</label>
+<input class="w-full px-4 py-3 rounded-xl border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 focus:ring-primary focus:border-primary" type="date"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-sm font-bold text-gray-700 dark:text-gray-300">Instansi/Perusahaan Penerbit</label>
+<input class="w-full px-4 py-3 rounded-xl border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 focus:ring-primary focus:border-primary" placeholder="Nama Instansi atau Perusahaan" type="text"/>
+</div>
+</div>
+<div class="upload-zone">
+<span class="material-symbols-outlined text-4xl text-gray-400 mb-3">cloud_upload</span>
+<div class="text-sm font-bold text-gray-900 dark:text-white mb-1">Klik untuk unggah atau seret berkas di sini</div>
+<div class="text-xs text-gray-500 mb-4">PDF, JPG, atau PNG (Maks. 2MB)</div>
+<button class="px-6 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-bold hover:bg-gray-200 transition-colors">Pilih Berkas</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<div class="size-12 bg-purple-50 dark:bg-purple-900/20 text-purple-600 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">home_pin</span>
+</div>
+<div>
+<h2 class="text-xl font-bold dark:text-white">Surat Keterangan Domisili</h2>
+<p class="text-sm text-gray-500">Surat keterangan dari Kelurahan/Desa di wilayah tujuan.</p>
+</div>
+</div>
+<div class="upload-zone">
+<span class="material-symbols-outlined text-4xl text-gray-400 mb-3">description</span>
+<div class="text-sm font-bold text-gray-900 dark:text-white mb-1">Klik untuk unggah atau seret berkas di sini</div>
+<div class="text-xs text-gray-500 mb-4">PDF, JPG, atau PNG (Maks. 2MB)</div>
+<button class="px-6 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-bold hover:bg-gray-200 transition-colors">Pilih Berkas</button>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-white dark:bg-gray-800 rounded-3xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm sticky top-8">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+<h3 class="font-bold text-lg dark:text-white">Panduan Dokumen</h3>
+</div>
+<div class="space-y-6">
+<div class="bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-2 border border-gray-100 dark:border-gray-800">
+<div class="aspect-[3/4] bg-gray-200 dark:bg-gray-700 rounded-xl mb-4 overflow-hidden relative group">
+<img alt="Contoh SK Mutasi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUFJol0enrVn4LX-KD32o2oveyCNC3Hv8n9Aw2OaIF3Yb9JTDmH233n7RvcnvE38jCJyHO8W5ftrdhD1jVnDlVgRT2Pe2fE65m8hl-Ob9BVwwPzgw1STh-SSTaWI1-5pxN8_E89O0EzKdEHRsqW9zNPhvPXcM9CAjCqO3QTQDMDPnqgzeL0WT4lXkQNkX9kptyP2TqRmptF65vm8N3_1mPMWKVJkrTO2Fxn-Lx4rWbgErxzhkTMYR_m_s5M4lgNK8Ciy8JjPvzDfvG"/>
+<div class="absolute inset-0 bg-navy-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-navy-900 px-4 py-2 rounded-lg text-xs font-bold shadow-lg">Lihat Jelas</button>
+</div>
+</div>
+<div class="px-2 pb-2">
+<p class="text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">Contoh SK Mutasi Valid</p>
+<p class="text-[10px] text-gray-500 leading-relaxed">Pastikan tanda tangan dan stempel instansi terlihat jelas.</p>
+</div>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-xs text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+<span>Scan dokumen asli, bukan fotokopi.</span>
+</li>
+<li class="flex items-start gap-3 text-xs text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+<span>Teks harus terbaca dengan jelas (tidak buram).</span>
+</li>
+<li class="flex items-start gap-3 text-xs text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+<span>Ukuran berkas maksimal 2MB per dokumen.</span>
+</li>
+</ul>
+<div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+<a class="text-primary text-xs font-bold flex items-center gap-1 hover:underline" href="#">
+                                    Butuh bantuan teknis?
+                                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 py-8 border-t border-gray-100 dark:border-gray-800">
+<a href="jalurmutasi.html" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Kembali
+</a>
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-12 py-4 rounded-xl bg-primary text-white font-bold shadow-xl shadow-primary/30 hover:bg-primary/90 transition-all hover:translate-x-1">
+                    Simpan &amp; Lanjutkan
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="bg-navy-900 text-white px-4 md:px-20 lg:px-40 py-12 mt-auto">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-white/50 text-sm">
+<div class="flex items-center gap-4">
+<div class="size-8 text-white/20">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"></path>
+</svg>
+</div>
+<span>© 2026 Pemerintah Provinsi Bengkulu. Dinas Pendidikan &amp; Kebudayaan.</span>
+</div>
+<div class="flex gap-8">
+<span class="hover:text-white cursor-pointer transition-colors">Bantuan</span>
+<span class="hover:text-white cursor-pointer transition-colors">Ketentuan</span>
+<span class="hover:text-white cursor-pointer transition-colors">Kontak</span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

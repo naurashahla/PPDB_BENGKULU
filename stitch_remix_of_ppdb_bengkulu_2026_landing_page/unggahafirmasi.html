@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Upload Berkas Afirmasi - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1E3A8A",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-radio:checked + label {
+            border-color: #1E3A8A;
+            background-color: rgba(30, 58, 138, 0.02);
+            box-shadow: 0 20px 25px -5px rgb(30 58 138 / 0.1), 0 8px 10px -6px rgb(30 58 138 / 0.1);
+        }
+        .card-radio:checked + label .check-icon {
+            display: flex;
+        }
+        .btn-lanjut.disabled {
+            background-color: #d1d5db;
+            color: #9ca3af;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        .btn-lanjut.enabled {
+            background-color: #1E3A8A;
+            color: white;
+            cursor: pointer;
+        }
+        .stepper-item.active .step-circle { @apply bg-primary text-white border-primary; }
+        .stepper-item.completed .step-circle { @apply bg-primary text-white border-primary; }
+        .stepper-item.pending .step-circle { @apply bg-white dark:bg-gray-800 text-gray-400 border-gray-300 dark:border-gray-600; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="relative z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 md:px-20 lg:px-40 py-4">
+<div class="flex items-center justify-between whitespace-nowrap">
+<a href="index.html" class="flex items-center gap-4 text-[#111318] dark:text-white hover:opacity-80 transition-opacity">
+<div class="h-10 w-auto">
+<img alt="Logo Bengkulu" class="h-full object-contain" src="images/BENGKULU.png" />
+</div>
+<div class="flex flex-col">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">PPDB Bengkulu 2026</h2>
+<span class="text-[9px] uppercase font-bold text-gray-500 dark:text-gray-400 tracking-wider">Dinas Pendidikan &amp; Kebudayaan</span>
+</div>
+</a>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-3 mr-4 border-r border-gray-200 dark:border-gray-700 pr-6">
+<!-- <span class="text-xs font-semibold text-gray-400">STATUS PESERTA</span> -->
+<!-- <span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold"> -->
+<!-- <span class="size-2 bg-blue-600 rounded-full animate-pulse"></span> TERVERIFIKASI
+                    </span> -->
+</div>
+<button class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 md:px-10 py-10">
+<div class="mb-10">
+<div class="flex items-center justify-center gap-4 md:gap-12">
+<div class="stepper-item completed flex items-center gap-3">
+<div class="step-circle size-8 rounded-full border-2 flex items-center justify-center text-sm font-bold">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">Pilih Jalur</span>
+</div>
+<div class="h-px w-8 md:w-16 bg-gray-300 dark:bg-gray-700"></div>
+<div class="stepper-item active flex items-center gap-3">
+<div class="step-circle size-8 rounded-full border-2 flex items-center justify-center text-sm font-bold">2</div>
+<span class="text-sm font-bold text-primary">Unggah Berkas</span>
+</div>
+<div class="h-px w-8 md:w-16 bg-gray-300 dark:bg-gray-700"></div>
+<div class="stepper-item pending flex items-center gap-3">
+<div class="step-circle size-8 rounded-full border-2 flex items-center justify-center text-sm font-bold">3</div>
+<span class="text-sm font-semibold text-gray-400">Konfirmasi</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="flex-1">
+<div class="bg-white dark:bg-[#1a212f] rounded-xl border border-[#dbdfe6] dark:border-gray-700 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-[#f0f2f4] dark:border-gray-700">
+<h1 class="text-xl font-bold text-[#111318] dark:text-white">Data Kartu Bantuan Sosial</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Lengkapi informasi kartu bantuan sosial yang masih aktif untuk kategori Afirmasi.</p>
+</div>
+<form class="p-6 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-[#111318] dark:text-white">Nomor Kartu (KIP/PKH/KKS)</label>
+<input class="w-full h-11 px-4 rounded-lg bg-background-light dark:bg-gray-800 border border-[#dbdfe6] dark:border-gray-700 text-sm focus:ring-primary focus:border-primary" placeholder="Contoh: 1234567890123456" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-[#111318] dark:text-white">Nama Kepala Keluarga</label>
+<input class="w-full h-11 px-4 rounded-lg bg-background-light dark:bg-gray-800 border border-[#dbdfe6] dark:border-gray-700 text-sm focus:ring-primary focus:border-primary" placeholder="Sesuai yang tertera di kartu" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-[#111318] dark:text-white">Scan/Foto Kartu Bantuan</label>
+<div class="mt-2 flex justify-center px-6 pt-10 pb-10 border-2 border-dashed border-[#dbdfe6] dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group cursor-pointer">
+<div class="space-y-2 text-center">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-primary mb-2">upload_file</span>
+<div class="flex text-sm text-gray-600 dark:text-gray-400">
+<label class="relative cursor-pointer rounded-md font-bold text-primary hover:text-red-700 focus-within:outline-none">
+<span>Klik untuk unggah</span>
+<input class="sr-only" type="file"/>
+</label>
+<p class="pl-1">atau tarik dan lepas file di sini</p>
+</div>
+<p class="text-xs text-gray-500">Mendukung format PDF, JPG, atau PNG (Maks. 2MB)</p>
+</div>
+</div>
+</div>
+<div class="pt-6 flex items-center justify-between border-t border-[#f0f2f4] dark:border-gray-700">
+<a href="jalurafirmasi.html" class="flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined">arrow_back</span>
+                            Kembali
+</a>
+<button class="bg-primary hover:bg-red-700 text-white px-8 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 transition-all" type="submit">
+                            Simpan &amp; Lanjutkan
+                        </button>
+</div>
+</form>
+</div>
+</div>
+<div class="lg:w-80 flex flex-col gap-6">
+<div class="bg-white dark:bg-[#1a212f] rounded-xl border border-[#dbdfe6] dark:border-gray-700 p-5 shadow-sm">
+<div class="flex items-center gap-2 mb-4 text-orange-600">
+<span class="material-symbols-outlined text-xl">info</span>
+<h3 class="font-bold text-sm">Informasi Penting</h3>
+</div>
+<ul class="space-y-3">
+<li class="text-xs text-[#616f89] dark:text-gray-400 flex gap-2">
+<span class="text-primary font-bold">•</span>
+                        Kartu yang diunggah harus atas nama pendaftar atau orang tua/wali dalam satu Kartu Keluarga.
+                    </li>
+<li class="text-xs text-[#616f89] dark:text-gray-400 flex gap-2">
+<span class="text-primary font-bold">•</span>
+                        Pastikan status kepesertaan kartu masih <strong>AKTIF</strong> dalam sistem DTKS Kemensos.
+                    </li>
+<li class="text-xs text-[#616f89] dark:text-gray-400 flex gap-2">
+<span class="text-primary font-bold">•</span>
+                        Foto atau hasil scan harus terbaca jelas, tidak terpotong, dan tidak buram.
+                    </li>
+</ul>
+</div>
+<div class="bg-white dark:bg-[#1a212f] rounded-xl border border-[#dbdfe6] dark:border-gray-700 overflow-hidden shadow-sm">
+<div class="p-4 border-b border-[#f0f2f4] dark:border-gray-700">
+<h3 class="font-bold text-sm text-[#111318] dark:text-white">Contoh Kartu</h3>
+</div>
+<div class="p-4 bg-gray-50 dark:bg-gray-800/50">
+<div class="relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
+<img alt="Contoh Kartu KIP" class="w-full h-auto opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdyZ0AQu7hf9yVrCUAXs8VfZXK1KnsAY_QjxphscwZ5dMpPJLNY7Vne6AQ4F1u6M62Qsf6qu8Z75NymXyo8VDAkC-xqUr7H-CStu0sGf9qBoQxuMhr43NrqL8TZy3S3Dx6Yrs7zdaKdcVCrwsFu2TeOpt6nP5AkMREs71Hh3g3sCj_IYYGSl0k6ezjsofvYcdWcmYkk9nliPDYfHWglhX6BAxgHR1rvlHTNzxFCqL12m_lApkAlewTND7GCxhh0b1mq18xETwCV-KU"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity">
+<span class="text-white text-xs font-bold px-3 py-1 border border-white rounded-full">Perbesar</span>
+</div>
+</div>
+<p class="text-[10px] text-center text-gray-500 mt-3 italic">Pastikan seluruh sisi kartu terlihat seperti contoh di atas.</p>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 p-5 rounded-xl border border-primary/20">
+<h3 class="font-bold text-sm text-[#111318] dark:text-white mb-2">Mengalami Masalah?</h3>
+<p class="text-xs text-[#616f89] dark:text-gray-400 mb-4 leading-relaxed">Jika nomor kartu Anda tidak ditemukan atau tidak valid, hubungi layanan pengaduan.</p>
+<button class="w-full bg-white dark:bg-gray-800 text-primary border border-primary/30 text-xs font-bold py-2.5 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                    Hubungi Helpdesk
+                </button>
+</div>
+</div>
+</div>
+<footer class="mt-16 py-8 border-t border-[#dbdfe6] dark:border-gray-700 text-center">
+<p class="text-xs text-[#616f89] dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            Data yang Anda unggah akan diverifikasi oleh panitia PPDB. Pemalsuan dokumen dapat mengakibatkan pembatalan status pendaftaran dan diproses secara hukum.
+        </p>
+<p class="text-[10px] text-[#616f89] dark:text-gray-500 mt-6">
+            © 2026 Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu.
+        </p>
+</footer>
+</main>
+
+</body></html>

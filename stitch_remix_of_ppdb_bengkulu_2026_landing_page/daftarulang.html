@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daftar Ulang Online - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#DC2626",
+                "background-light": "#f5f6f8",
+                "background-dark": "#0f1323",
+              },
+              fontFamily: {
+                "display": ["Public Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d0f1c] dark:text-white transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e6e9f4] dark:border-b-gray-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50">
+<a href="index.html" class="flex items-center gap-4 text-[#0d0f1c] dark:text-white hover:opacity-80 transition-opacity">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h2 class="text-[#0d0f1c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">PPDB Bengkulu 2026</h2>
+</a>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#0d0f1c] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary" href="#">Beranda</a>
+<a class="text-[#0d0f1c] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary" href="#">Informasi</a>
+<a class="text-[#0d0f1c] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary" href="#">Pengumuman</a>
+<a class="text-[#0d0f1c] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary" href="#">Bantuan</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLBh-f0Tdzb_FM-du67IgjLyPkyNu8qup3hsS9itR_3CAy0xElat5EhThPGP6ei6_VEbVxalNoSTPr2Jd90RmGjqJgrKyAvaxSlVMTek-wn3MRSJqu6MRDWlTPT5p5yV9RcjTzkprzO_cKhnUy4V-JGT_2N8Nket7k0ECNOgfOreps3s50XnPrlKCu1kME6VGYUYroMyJL4yimIDE0EiuwxybnimIFSaHMOg4AqmRlq2BjcezmcYqfAP1QJagZ3Sk4zowA8BC93Txv");'></div>
+</div>
+</header>
+<main class="flex-1 max-w-[1280px] mx-auto w-full px-4 md:px-10 py-8">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-primary text-sm font-medium leading-normal" href="#">Beranda</a>
+<span class="text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-[#0d0f1c] dark:text-gray-300 text-sm font-medium leading-normal">Daftar Ulang Online</span>
+</div>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-8">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-[#0d0f1c] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Daftar Ulang Online</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Lengkapi formulir untuk mengonfirmasi status sebagai siswa baru di sekolah tujuan.</p>
+</div>
+</div>
+<!-- Status Kelulusan Banner (Card Component) -->
+<div class="mb-8">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-900 border border-emerald-100 dark:border-emerald-900/30">
+<div class="flex flex-col md:flex-row w-full">
+<div class="w-full md:w-64 bg-emerald-500 flex items-center justify-center p-8 text-white">
+<span class="material-symbols-outlined text-6xl">verified</span>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-6">
+<p class="text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">Status Kelulusan</p>
+<p class="text-[#0d0f1c] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Selamat! Anda Dinyatakan Lulus</p>
+<div class="flex flex-col md:flex-row md:items-end gap-4 justify-between">
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal max-w-2xl">
+                                    Anda telah diterima di <strong>SMAN 1 Kota Bengkulu</strong> melalui jalur <strong>Zonasi</strong>. Silakan selesaikan proses daftar ulang di bawah ini sebelum tanggal <strong>15 Juli 2026</strong>.
+                                </p>
+<button class="flex min-w-[180px] cursor-pointer items-center gap-2 justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium leading-normal hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="truncate">SK Kelulusan</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Main Form Area (Steps) -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Tabs -->
+<div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden">
+<div class="flex border-b border-gray-100 dark:border-gray-800 px-4 gap-4 md:gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-[13px] pt-4 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">1. Biodata</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 dark:text-gray-400 pb-[13px] pt-4 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">2. Unggah Dokumen</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 dark:text-gray-400 pb-[13px] pt-4 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">3. Orang Tua/Wali</p>
+</a>
+</div>
+<!-- Form Content (Simulated for Step 1) -->
+<div class="p-8">
+<h3 class="text-lg font-bold mb-6 text-[#0d0f1c] dark:text-white">Verifikasi Data Calon Siswa</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400">Nama Lengkap</label>
+<input class="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold text-gray-700 dark:text-gray-300" disabled="" type="text" value="ADITYA RAMADHAN"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400">NISN</label>
+<input class="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold text-gray-700 dark:text-gray-300" disabled="" type="text" value="0056789123"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400">Sekolah Asal</label>
+<input class="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold text-gray-700 dark:text-gray-300" disabled="" type="text" value="SMP Negeri 1 Kota Bengkulu"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400">Nomor Telepon/WA Aktif</label>
+<input class="bg-white dark:bg-background-dark border-gray-200 dark:border-gray-700 rounded-lg text-sm focus:ring-primary focus:border-primary" placeholder="Contoh: 08123456789" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400">Alamat Tempat Tinggal (Sesuai KK)</label>
+<textarea class="bg-white dark:bg-background-dark border-gray-200 dark:border-gray-700 rounded-lg text-sm focus:ring-primary focus:border-primary" rows="3">Jl. Gading Cempaka No. 45, RT 02/RW 01, Kel. Jembatan Kecil, Kec. Singaran Pati, Kota Bengkulu</textarea>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-gray-100 dark:border-gray-800 flex justify-end">
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 hover:bg-primary/90 shadow-md shadow-primary/20">
+<span>Lanjut ke Unggah Dokumen</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Sidebar -->
+<div class="flex flex-col gap-6">
+<div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary">description</span>
+<h4 class="text-lg font-bold text-[#0d0f1c] dark:text-white">Persyaratan Fisik</h4>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">Setelah pendaftaran online, serahkan berkas fisik berikut ke sekolah tujuan:</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm dark:text-gray-300">Fotokopi Ijazah/SKL dilegalisir (2 lembar)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm dark:text-gray-300">Fotokopi Kartu Keluarga (2 lembar)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm dark:text-gray-300">Fotokopi Akta Kelahiran (2 lembar)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm dark:text-gray-300">Pas Foto 3x4 Latar Merah (4 lembar)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm dark:text-gray-300">Surat Pernyataan Orang Tua (Bermaterai 10.000)</span>
+</li>
+</ul>
+<div class="mt-6 p-4 bg-primary/5 dark:bg-primary/10 rounded-lg border border-primary/10">
+<p class="text-xs text-primary font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">info</span>
+                                Batas Akhir Penyerahan Berkas:
+                            </p>
+<p class="text-sm font-bold text-primary mt-1">17 Juli 2026, Pukul 14:00 WIB</p>
+</div>
+</div>
+<div class="bg-indigo-600 p-6 rounded-xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-bold text-lg mb-2">Butuh Bantuan?</h4>
+<p class="text-sm opacity-90 mb-4">Tim helpdesk kami siap membantu kendala teknis Anda.</p>
+<a class="inline-flex items-center gap-2 bg-white text-indigo-600 px-4 py-2 rounded-lg text-sm font-bold" href="#">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+                                Chat WhatsApp
+                            </a>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-20">
+<span class="material-symbols-outlined text-9xl">contact_support</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action Bar (Secondary) -->
+<div class="mt-12 flex flex-col md:flex-row items-center justify-between p-6 bg-white dark:bg-gray-900 rounded-xl shadow-sm border-t-4 border-primary">
+<div class="flex items-center gap-4 mb-4 md:mb-0">
+<div class="size-12 bg-emerald-50 dark:bg-emerald-900/20 rounded-full flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+</div>
+<div>
+<p class="font-bold text-[#0d0f1c] dark:text-white leading-tight">Pastikan Data Benar</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Data yang sudah dikirim tidak dapat diubah kembali.</p>
+</div>
+</div>
+<button class="w-full md:w-auto bg-primary text-white font-black py-4 px-12 rounded-xl text-lg hover:shadow-lg hover:shadow-primary/30 transition-all uppercase tracking-wider">
+                    Kirim Pendaftaran Ulang
+                </button>
+</div>
+<footer class="mt-16 py-8 border-t border-gray-200 dark:border-gray-800 flex flex-col items-center text-center">
+<div class="flex items-center gap-4 mb-4 grayscale opacity-60">
+<div class="h-10 w-auto bg-center bg-no-repeat bg-contain" data-alt="Provincial Government Logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrQNBaVsc1x7Lu8iSALYVftBSayWsOTUT6EgUnfjhZD9uqrthE_3BmymFz3sTNZMNQnQUaB7RvutEMBYIt59YtkWYb_ZN8v1kxkVaL5-LA7lF1-QX_fgMNiS8inwLE7MALWj73JuiysyuEX-QWNYQ_e5aOU3xjGhHBztuAka5Mmjo6VY7frHEVZ6FG3wuaVQCfXZ3ucR0ydrtBzOBcEv-MXcaqjg_WJrRmunRlJy1R3Vjjw2yLLcU1ds1KxH5X9atQpte2fnOAOh7v'); width: 40px;"></div>
+<span class="font-bold text-gray-500 dark:text-gray-400">Pemerintah Provinsi Bengkulu</span>
+</div>
+<p class="text-sm text-gray-400 dark:text-gray-500">© 2026 Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu. Seluruh Hak Cipta Dilindungi.</p>
+</footer>
+</main>
+</div>
+</body></html>

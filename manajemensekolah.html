@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin School &amp; Quota Management Dashboard - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#DC2626",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1323",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0 sticky top-0 h-screen">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary rounded-lg p-2 text-white">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">PPDB Bengkulu</h1>
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Admin Portal 2026</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Beranda</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">school</span>
+<p class="text-sm font-bold">Manajemen Sekolah</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-sm font-medium">Manajemen Pagu</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">verified_user</span>
+<p class="text-sm font-medium">Verifikasi Berkas</p>
+</div>
+<div class="pt-4 pb-2">
+<p class="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Konfigurasi</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Pengaturan Sistem</p>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+<div class="size-10 rounded-full bg-slate-200" data-alt="User profile avatar placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7XPwK8SU19qcH6rSJRNDzKD8DJzxsN5372uFLw3DKWRFCyg3Lur53Jk-NFnsNpualUmEpsoAnIrckdvyfea9iD8DhTs14722w4gGc3JCJfqn6RSUfIL_uJPOaw880eV8Op8ercsBhIRCRwji8sZfjBfscN3c9YxLCb0AMRxW_1OKm6sz_XBRloZeYZJ8NPhyU3rryTTxJdS0CCNc0ISbRM9uzHkQNNRgC5M9pmdlViLkzrpvNTGSidpHk169X1IypKyvPZCYsoqtq'); background-size: cover;"></div>
+<div class="flex flex-col">
+<p class="text-sm font-bold truncate">Dinas Pendidikan</p>
+<p class="text-xs text-slate-500">Prov. Bengkulu</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0 overflow-y-auto">
+<!-- TopNavBar -->
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 sticky top-0 z-10">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Cari sekolah, NPSN, atau kecamatan..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="size-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<button class="flex items-center gap-2 pl-2 pr-1 py-1 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="text-sm font-medium px-2">Administrator</span>
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">AD</div>
+</button>
+</div>
+</header>
+<div class="p-8 max-w-[1400px] mx-auto w-full">
+<!-- PageHeading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">
+<span>Admin Portal</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary">Sekolah</span>
+</nav>
+<h2 class="text-3xl font-black text-slate-900 dark:text-white leading-tight">Manajemen Sekolah &amp; Kuota</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Kelola data sekolah dan alokasi kuota penerimaan siswa baru (Pagu) tahun 2026.</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span>Tambah Sekolah Baru</span>
+</button>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="size-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center">
+<span class="material-symbols-outlined">school</span>
+</div>
+<span class="text-xs font-bold text-green-500 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">+3 thn ini</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total SMA/SMK Negeri</p>
+<p class="text-3xl font-black text-slate-900 dark:text-white mt-1">142</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="size-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="text-xs font-bold text-slate-400">Pagu Aktif</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Alokasi Pagu</p>
+<p class="text-3xl font-black text-slate-900 dark:text-white mt-1">15,420</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="size-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<span class="text-xs font-bold text-emerald-500">97.2% Selesai</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Sekolah Terverifikasi</p>
+<p class="text-3xl font-black text-slate-900 dark:text-white mt-1">138</p>
+</div>
+</div>
+<!-- Table Content -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden mb-8">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h3 class="font-bold text-lg">Daftar Sekolah Terdaftar</h3>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-semibold border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                                Filter
+                            </button>
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-semibold border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50">
+<span class="material-symbols-outlined text-sm">download</span>
+                                Ekspor
+                            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50">
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800">Nama Sekolah</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800">Kecamatan</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800">Total Pagu</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800">Koordinat</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200 dark:border-slate-800 text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">SMA Negeri 1 Kota Bengkulu</span>
+<span class="text-xs text-slate-500">NPSN: 10702341</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-slate-600 dark:text-slate-400">Ratu Samban</span>
+</td>
+<td class="px-6 py-4">
+<div class="inline-flex items-center px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                                            324 Siswa
+                                        </div>
+</td>
+<td class="px-6 py-4 text-sm font-mono text-slate-500">102.2618, -3.8014</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:text-primary/80 font-bold text-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-base">edit_note</span>
+                                            Edit
+                                        </button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">SMA Negeri 2 Kota Bengkulu</span>
+<span class="text-xs text-slate-500">NPSN: 10702342</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-slate-600 dark:text-slate-400">Gading Cempaka</span>
+</td>
+<td class="px-6 py-4">
+<div class="inline-flex items-center px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                                            288 Siswa
+                                        </div>
+</td>
+<td class="px-6 py-4 text-sm font-mono text-slate-500">102.2981, -3.8245</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:text-primary/80 font-bold text-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-base">edit_note</span>
+                                            Edit
+                                        </button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">SMA Negeri 5 Kota Bengkulu</span>
+<span class="text-xs text-slate-500">NPSN: 10702345</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-slate-600 dark:text-slate-400">Selebar</span>
+</td>
+<td class="px-6 py-4">
+<div class="inline-flex items-center px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                                            324 Siswa
+                                        </div>
+</td>
+<td class="px-6 py-4 text-sm font-mono text-slate-500">102.3214, -3.8456</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:text-primary/80 font-bold text-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-base">edit_note</span>
+                                            Edit
+                                        </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Edit Form Section (Appears when editing) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- School Profile & Location -->
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-6">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">info</span>
+<h4 class="font-bold text-lg">Profil &amp; Lokasi Sekolah</h4>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Nama Sekolah</label>
+<input class="w-full px-4 py-2 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary" type="text" value="SMA Negeri 1 Kota Bengkulu"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-500 uppercase tracking-widest">NPSN</label>
+<input class="w-full px-4 py-2 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary" type="text" value="10702341"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Alamat Lengkap</label>
+<textarea class="w-full px-4 py-2 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary" rows="2">Jl. Soeprapto No. 88, Anggut Bawah, Ratu Samban, Kota Bengkulu</textarea>
+</div>
+<div class="md:col-span-2">
+<label class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-2">Pilih Lokasi Geografis</label>
+<div class="relative w-full h-64 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden group">
+<div class="absolute inset-0 bg-slate-200" data-location="Bengkulu City, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdkXaB3no0YzUM10UJnwTpKfzRF8g8RbEluZ_cCFU2up-4AciCHiQ9svSvoBc9ORRD8kZruhrVT2TdQ_su0hITe1OEnoZa7-e1zl6y3BWdIScxfoZLnUClcn-6FddBNiZIChhEAkYvz_Nwt0AAc2LFqGIET4uteT0Lpx5hpQUSjl363B1iF-H7LRZeLsIWfRnhX54wpflup6pAi3nhQrSdsBeyWvj4F1V3HTsuFDMlFsTBYqvrCbd5Yyl7gUkSD4pPi_p2NokvJWoz'); background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/5">
+<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 bg-white dark:bg-slate-900 p-2 rounded-lg shadow-lg border border-slate-200 dark:border-slate-800 flex gap-4">
+<div class="text-[10px] uppercase font-bold text-slate-400">Lat: <span class="text-slate-900 dark:text-white">-3.8014</span></div>
+<div class="text-[10px] uppercase font-bold text-slate-400">Lng: <span class="text-slate-900 dark:text-white">102.2618</span></div>
+</div>
+</div>
+<p class="text-[10px] text-slate-500 mt-2 italic">*Geser pin pada peta untuk menyesuaikan koordinat sekolah.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Quota Allocation -->
+<div class="space-y-8">
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 flex flex-col h-full">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">pie_chart</span>
+<h4 class="font-bold text-lg">Alokasi Pagu Jalur</h4>
+</div>
+<div class="text-right">
+<span class="text-xs text-slate-400 font-bold uppercase block">Total Pagu</span>
+<span class="text-xl font-black text-primary">324</span>
+</div>
+</div>
+<div class="space-y-5 flex-1">
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-300">Zonasi (Domisili)</label>
+<span class="text-xs font-bold text-slate-400">55%</span>
+</div>
+<div class="relative">
+<input class="w-full pl-4 pr-12 py-3 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-base font-bold text-primary focus:ring-primary focus:border-primary" type="number" value="178"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">Siswa</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-300">Prestasi</label>
+<span class="text-xs font-bold text-slate-400">25%</span>
+</div>
+<div class="relative">
+<input class="w-full pl-4 pr-12 py-3 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-base font-bold text-primary focus:ring-primary focus:border-primary" type="number" value="81"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">Siswa</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-300">Afirmasi (EKM)</label>
+<span class="text-xs font-bold text-slate-400">15%</span>
+</div>
+<div class="relative">
+<input class="w-full pl-4 pr-12 py-3 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-base font-bold text-primary focus:ring-primary focus:border-primary" type="number" value="49"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">Siswa</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-xs font-bold text-slate-600 dark:text-slate-300">Perpindahan Orang Tua</label>
+<span class="text-xs font-bold text-slate-400">5%</span>
+</div>
+<div class="relative">
+<input class="w-full pl-4 pr-12 py-3 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-base font-bold text-primary focus:ring-primary focus:border-primary" type="number" value="16"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">Siswa</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex gap-3">
+<button class="flex-1 py-3 border border-slate-200 dark:border-slate-800 font-bold rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Batal</button>
+<button class="flex-1 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-md shadow-primary/20">Simpan Perubahan</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-8 py-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500">© 2026 Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu. Seluruh hak cipta dilindungi.</p>
+<div class="flex items-center gap-6">
+<a class="text-xs font-bold text-slate-400 hover:text-primary transition-colors uppercase tracking-widest" href="#">Panduan Admin</a>
+<a class="text-xs font-bold text-slate-400 hover:text-primary transition-colors uppercase tracking-widest" href="#">Kebijakan Privasi</a>
+<a class="text-xs font-bold text-slate-400 hover:text-primary transition-colors uppercase tracking-widest" href="#">Hubungi Kami</a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

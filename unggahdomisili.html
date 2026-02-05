@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seleksi Sekolah Domisili Akademik - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1E3A8A",
+                        accent: "#1E3A8A",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a"
+                    },
+                    fontFamily: {
+                        display: "Inter"
+                    }
+                }
+            }
+        };
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .school-card:hover .add-btn {
+            @apply bg-primary text-white;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            @apply bg-slate-200 rounded-full;
+        }
+        .kecamatan-header {
+            @apply sticky top-0 z-10 bg-slate-50/95 backdrop-blur-sm py-2 px-4 border-y border-slate-200 text-[10px] font-black uppercase tracking-[0.15em] text-slate-500 flex items-center gap-2;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="relative z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 md:px-20 lg:px-40 py-4">
+<div class="flex items-center justify-between whitespace-nowrap">
+<a href="index.html" class="flex items-center gap-4 text-[#111318] dark:text-white hover:opacity-80 transition-opacity">
+<div class="h-10 w-auto">
+<img alt="Logo Bengkulu" class="h-full object-contain" src="C:\Users\HP\Downloads\BENGKULU.png" />
+</div>
+<div class="flex flex-col">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">PPDB Bengkulu 2026</h2>
+<span class="text-[9px] uppercase font-bold text-gray-500 dark:text-gray-400 tracking-wider">Dinas Pendidikan &amp; Kebudayaan</span>
+</div>
+</a>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-3 mr-4 border-r border-gray-200 dark:border-gray-700 pr-6">
+<span class="text-xs font-semibold text-gray-400">STATUS PESERTA</span>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">
+<span class="size-2 bg-blue-600 rounded-full animate-pulse"></span> TERVERIFIKASI
+                    </span>
+</div>
+<button class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 py-8 px-4 md:px-20 lg:px-40">
+<div class="max-w-7xl mx-auto">
+<nav class="flex mb-6 text-sm font-medium text-slate-500 gap-2 items-center">
+<a class="hover:text-primary" href="#">Beranda</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Jalur Domisili</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 font-bold">Pemilihan Sekolah</span>
+</nav>
+<div class="mb-8">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+<div class="flex-1">
+<h1 class="text-3xl font-black text-slate-900 mb-2">Pilih Sekolah Domisili Akademik</h1>
+<div class="flex items-center gap-2 text-primary bg-blue-50 w-fit px-3 py-1.5 rounded-lg border border-blue-100">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-sm font-bold uppercase tracking-wider">Wilayah Domicile: KOTA BENGKULU - KEC. RATU AGUNG</span>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-white p-5 rounded-2xl border-2 border-blue-100 shadow-sm max-w-xl">
+<div class="size-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-blue-600">gavel</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-blue-700 mb-1">Ketentuan Ketat Domisili</h4>
+<p class="text-xs text-slate-600 font-medium leading-relaxed">
+                                    Sesuai aturan PPDB Domisili Akademik, Anda hanya dapat memilih sekolah yang berada di dalam wilayah Kecamatan domisili Anda (Kec. Ratu Agung).
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-7 space-y-4">
+<div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-[650px]">
+<div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+<div class="flex flex-col">
+<h3 class="font-bold text-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">list_alt</span>
+                                        Daftar SMA Tersedia
+                                    </h3>
+<p class="text-[10px] text-slate-500 font-bold uppercase tracking-tight mt-0.5">Wilayah: Kecamatan Ratu Agung</p>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="pl-9 pr-4 py-1.5 text-sm border-slate-200 rounded-lg focus:ring-accent w-48 lg:w-64" placeholder="Cari sekolah..." type="text"/>
+</div>
+</div>
+<div class="overflow-y-auto custom-scrollbar flex-1">
+<div class="kecamatan-header">
+<span class="material-symbols-outlined text-[14px]">home_pin</span>
+                                    Sekolah di Kecamatan Ratu Agung (Domisili Anda)
+                                </div>
+<div class="p-4 space-y-3">
+<div class="school-card p-4 rounded-xl border-2 border-blue-100 bg-blue-50/20 hover:border-accent hover:bg-blue-50/40 transition-all flex items-center justify-between group">
+<div class="flex gap-4 items-center">
+<div class="size-12 bg-white border border-blue-100 rounded-lg flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-bold text-slate-800">SMAN 1 Kota Bengkulu</h4>
+<span class="text-[9px] bg-primary text-white px-1.5 py-0.5 rounded-sm font-bold uppercase">Prioritas Utama</span>
+</div>
+<p class="text-xs text-slate-500">Jl. Selat Baru No. 1, Kec. Ratu Agung</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Akreditasi A</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase">Sisa Kuota: 42</span>
+</div>
+</div>
+</div>
+<button class="add-btn size-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="school-card p-4 rounded-xl border border-slate-200 hover:border-accent hover:bg-blue-50/30 transition-all flex items-center justify-between group">
+<div class="flex gap-4 items-center">
+<div class="size-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-800">SMAN 7 Kota Bengkulu</h4>
+<p class="text-xs text-slate-500">Jl. Lingkar Barat, Kec. Ratu Agung</p>
+<div class="flex items-center gap-3 mt-1">
+<span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Akreditasi B</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase">Sisa Kuota: 110</span>
+</div>
+</div>
+</div>
+<button class="add-btn size-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="px-6 py-10 flex flex-col items-center justify-center text-center">
+<div class="size-16 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-slate-400 text-3xl">location_off</span>
+</div>
+<h4 class="text-sm font-bold text-slate-600">Tidak Ada Sekolah Lain</h4>
+<p class="text-xs text-slate-400 max-w-xs mt-1">Sistem membatasi pemilihan sekolah hanya pada Kecamatan domisili sesuai aturan tahun 2026.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="bg-white rounded-2xl border-2 border-primary/20 shadow-xl overflow-hidden flex flex-col h-[650px]">
+<div class="p-5 border-b border-slate-100 bg-primary text-white">
+<h3 class="font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">star</span>
+                                    Urutan Prioritas Pilihan
+                                </h3>
+<p class="text-[10px] opacity-80 mt-1 uppercase tracking-widest font-bold">Maksimal 2 Sekolah di Kec. Ratu Agung</p>
+</div>
+<div class="flex-1 p-5 overflow-y-auto custom-scrollbar">
+<div class="space-y-4">
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4 relative group">
+<div class="absolute -left-3 top-1/2 -translate-y-1/2 size-7 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center shadow-lg">1</div>
+<div class="flex items-center justify-between ml-4">
+<div>
+<h4 class="font-bold text-sm text-slate-800">SMAN 1 Kota Bengkulu</h4>
+<p class="text-[10px] text-slate-500 font-medium">Kec. Ratu Agung (Pilihan Utama)</p>
+</div>
+<button class="text-slate-300 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<div class="border-2 border-dashed border-slate-200 rounded-xl p-6 flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-2xl mb-1">add_circle</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Tambah Pilihan 2</p>
+</div>
+</div>
+</div>
+<div class="p-5 bg-slate-50 border-t border-slate-100 space-y-4">
+<div class="bg-amber-50 border border-amber-100 p-3 rounded-lg flex gap-3">
+<span class="material-symbols-outlined text-amber-600 text-sm">warning</span>
+<p class="text-[10px] text-amber-900 leading-tight">
+                                        Sesuai regulasi terbaru, Anda hanya dapat memilih sekolah di dalam Kecamatan Ratu Agung. Sekolah di luar wilayah ini tidak ditampilkan.
+                                    </p>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-md">
+                                    Simpan &amp; Lanjut Verifikasi <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-slate-900 text-slate-400 py-8 px-4 md:px-20 lg:px-40 text-center">
+<p class="text-sm">© 2026 Dinas Pendidikan &amp; Kebudayaan Provinsi Bengkulu. <br class="md:hidden"/> Seluruh hak cipta dilindungi.</p>
+</footer>
+</div>
+
+</body></html>

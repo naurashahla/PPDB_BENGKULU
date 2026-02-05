@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Login Portal - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#607afb",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1323",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 md:px-20 lg:px-40 py-4">
+<div class="flex items-center justify-between whitespace-nowrap">
+<a href="index.html" class="flex items-center gap-4 text-[#111318] dark:text-white hover:opacity-80 transition-opacity">
+<div class="h-10 w-auto">
+<img alt="Logo Bengkulu" class="h-full object-contain" src="C:\Users\HP\Downloads\BENGKULU.png" />
+</div>
+<div class="flex flex-col border-l border-gray-300 dark:border-gray-700 pl-4">
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">PPDB Bengkulu 2026</h2>
+<span class="text-[9px] uppercase font-bold text-gray-500 dark:text-gray-400 tracking-wider">Dinas Pendidikan &amp; Kebudayaan</span>
+</div>
+</a>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111318] dark:text-white text-sm font-semibold hover:text-primary transition-colors" href="hasilseleksi.html">Informasi</a>
+<a class="text-[#111318] dark:text-white text-sm font-semibold hover:text-primary transition-colors" href="pagusekolah.html">Pagu</a>
+<a class="text-[#111318] dark:text-white text-sm font-semibold hover:text-primary transition-colors" href="#jadwal">Jadwal</a>
+<a class="text-[#111318] dark:text-white text-sm font-semibold hover:text-primary transition-colors" href="#kontak">Kontak</a>
+</div>
+<a href="login.html" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90 shadow-lg">
+<span>Login</span>
+</a>
+</div>
+</div>
+</header>
+</button>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center p-6 lg:p-12">
+<div class="max-w-[1100px] w-full bg-white dark:bg-gray-900 rounded-xl shadow-2xl overflow-hidden flex flex-col lg:flex-row min-h-[600px]">
+<!-- Left Side: Visual/Hero -->
+<div class="hidden lg:flex lg:w-1/2 relative bg-primary items-end p-12 overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Official Governor Office of Bengkulu Province" style='background-image: linear-gradient(180deg, rgba(31, 68, 249, 0.4) 0%, rgba(15, 19, 35, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQBBe8L7favW3tPsGM5LRILrI2wHYFhdweE99DVEWW6Qqle_V5j5JTcy2jyFCGkPDz5mGwaHMk_-wuaUYbqjNKvRk3fsNeel8zD0VfOd-Kasnrirq9rWXap3_OToQk8bKZDQaaJxWbDI7G_wepkJFzOlkEBcYID7ZtgZ3EpdeGRx_Apzq9c9aQNy92eikphvYGmabII3wsy-ukAq5wjTQKySTVu5YpEKRwFr77mKYUeoQtLnIRN6JUFM312ykDSIpzmM2zPcyhbMP0");'></div>
+<div class="relative z-10 text-white">
+<div class="mb-6 inline-flex p-3 bg-white/10 backdrop-blur-md rounded-xl">
+<span class="material-symbols-outlined text-4xl">school</span>
+</div>
+<h1 class="text-4xl font-bold mb-4 leading-tight">Wujudkan Masa Depan Gemilang di Bengkulu</h1>
+<p class="text-white/80 text-lg">Sistem Penerimaan Peserta Didik Baru Terintegrasi untuk SMA, SMK, dan SLB Provinsi Bengkulu Tahun Ajaran 2026/2027.</p>
+<div class="mt-8 flex gap-4">
+<div class="flex items-center gap-2 text-sm text-white/70">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>Aman &amp; Transparan</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-white/70">
+<span class="material-symbols-outlined text-sm">speed</span>
+<span>Proses Cepat</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Login Card -->
+<div class="w-full lg:w-1/2 flex flex-col justify-center px-8 py-12 lg:px-16">
+<div class="mb-10 text-center lg:text-left">
+<div class="flex justify-center lg:justify-start mb-4">
+<div class="size-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">lock</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-[#0d0f1c] dark:text-white">Portal Login Siswa</h2>
+<p class="text-gray-500 dark:text-gray-400 mt-2">Silakan masuk menggunakan identitas NISN resmi Anda.</p>
+</div>
+<form id="loginForm" class="space-y-6" onsubmit="handleLogin(event)">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#0d0f1c] dark:text-gray-200">Nomor Induk Siswa Nasional (NISN)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">person</span>
+<input id="username" class="w-full pl-12 pr-4 py-4 rounded-lg border border-[#ced2e9] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#0d0f1c] dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-gray-400" placeholder="Contoh: 0071234567 atau admin" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-[#0d0f1c] dark:text-gray-200">Kata Sandi (Default: Tgl Lahir)</label>
+<a class="text-xs text-primary font-medium hover:underline" href="#">Lupa Password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">lock_open</span>
+<input id="password" class="w-full pl-12 pr-12 py-4 rounded-lg border border-[#ced2e9] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#0d0f1c] dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-gray-400" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<p class="text-[11px] text-gray-400 mt-1 italic">Format Tgl Lahir: DDMMYYYY</p>
+</div>
+<div class="pt-2">
+<button class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 group" type="submit">
+<span>Masuk ke Dashboard</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-10 border-t border-gray-100 dark:border-gray-800 pt-8 text-center">
+<p class="text-gray-600 dark:text-gray-400 text-sm">
+                            Belum memiliki akun? 
+                            <a class="text-primary font-bold hover:underline ml-1" href="#">Daftar Sekarang</a>
+</p>
+</div>
+<div class="mt-auto pt-8 flex items-center justify-center gap-4 grayscale opacity-60">
+<div class="text-[10px] text-gray-400 font-medium tracking-widest uppercase">Didukung Oleh:</div>
+<div class="h-6 w-px bg-gray-200"></div>
+<div class="text-[10px] text-gray-500 font-bold">PEMPROV BENGKULU</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="px-40 py-10 flex flex-col items-center gap-4 text-center">
+<p class="text-gray-500 dark:text-gray-400 text-xs">
+                © 2026 Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu. Seluruh Hak Cipta Dilindungi.
+            </p>
+<div class="flex gap-4 text-xs text-gray-400">
+<a class="hover:text-primary" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-primary" href="#">Kebijakan Privasi</a>
+<a class="hover:text-primary" href="#">Peta Situs</a>
+</div>
+</footer>
+</div>
+<script>
+function handleLogin(event) {
+  event.preventDefault();
+  
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  
+  if (username === 'admin' && password === 'admin') {
+    window.location.href = 'admin.html';
+  } else if (username === 'user' && password === 'user') {
+    window.location.href = 'user.html';
+  } else {
+    alert('Username atau password salah. Silakan coba lagi.\n\nTip: Gunakan "admin"/"admin" atau "user"/"user"');
+  }
+}
+</script>
+</body></html>

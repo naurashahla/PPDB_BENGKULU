@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>School Admin Individual Verification View - PPDB Bengkulu 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#DC2626",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1323",
+                        "success": "#10b981",
+                        "danger": "#ef4444",
+                        "whatsapp": "#25D366"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Lexend', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<a href="index.html" class="flex items-center gap-4 text-primary hover:opacity-80 transition-opacity">
+<div class="size-8">
+<img alt="Logo Bengkulu" class="h-full object-contain" src="C:\Users\HP\Downloads\BENGKULU.png" />
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">PPDB Bengkulu 2026</h2>
+</a>
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-slate-200 dark:border-slate-700">
+<div class="text-slate-500 bg-slate-50 dark:bg-slate-800 flex items-center justify-center px-3 border-r-0">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-0 px-2 text-sm" placeholder="Cari NISN atau Nama" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="index.html">Dashboard</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="verifikasi.html">Verifikasi</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Laporan</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Bantuan</a>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHKrTalKmohbhwFsToIfUjKBo_KJ_E0L_3IDcSXeTpMdJEEikZLvBdN3Z2UD5rYxhD-bq7T7ynPFF_fiAMtn8Ms4mKLcqJrBbNwRXj9i56vrNtUNd7Umogfb1sNNsx2Wq1DRQE4EssXiWKW5cCRopW7zVI-tZEI-vCwWPjJzlFw6-sH46s8v3K7XAvqKNtzL7JL6KSESvE0yv3y4Mm6G6zYwceih43Bd1UgxW087WvKgSMPO0YUAGK1MsVRESM49yvsqrjsAcpcF2O");'></div>
+<div class="hidden lg:block">
+<p class="text-xs font-bold text-slate-900 dark:text-white">Admin SMAN 1</p>
+<p class="text-[10px] text-slate-500">Operator Sekolah</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col px-6 lg:px-20 py-6 gap-6">
+<nav class="flex flex-wrap gap-2 items-center">
+<a class="text-primary text-sm font-medium hover:underline" href="index.html">Beranda</a>
+<span class="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
+<a class="text-primary text-sm font-medium hover:underline" href="verifikasi.html">Daftar Verifikasi</a>
+<span class="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
+<span class="text-slate-500 text-sm font-medium">Detail Siswa</span>
+</nav>
+<div class="flex flex-wrap justify-between items-center gap-4 bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h1 class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-tight">Verifikasi: Budi Setiawan</h1>
+<span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full">Menunggu Verifikasi</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">No. Pendaftaran: 2026-001-998 | Jalur: <span class="text-primary font-bold">Zonasi</span> | NISN: 0098712344</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-lg mr-2">arrow_back</span>
+                Kembali
+            </button>
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-md hover:bg-red-700 transition-colors">
+<span class="material-symbols-outlined text-lg mr-2">save</span>
+                Simpan Draft
+            </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="flex border-b border-slate-200 dark:border-slate-800 px-6 gap-8 overflow-x-auto">
+<a class="flex items-center gap-2 border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-4 pt-5 hover:text-primary transition-all whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+<span class="text-sm font-bold uppercase tracking-wider">Data Biodata</span>
+</a>
+<a class="flex items-center gap-2 border-b-[3px] border-primary text-primary pb-4 pt-5 whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="text-sm font-bold uppercase tracking-wider">Dokumen Pendukung</span>
+</a>
+<a class="flex items-center gap-2 border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-4 pt-5 hover:text-primary transition-all whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-xl">school</span>
+<span class="text-sm font-bold uppercase tracking-wider">Nilai Rapor</span>
+</a>
+<a class="flex items-center gap-2 border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-4 pt-5 hover:text-primary transition-all whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-xl">history</span>
+<span class="text-sm font-bold uppercase tracking-wider">Log Aktivitas</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+<div class="p-8 border-r border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+<div class="mb-8">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">fact_check</span>
+                        Pemeriksaan Dokumen
+                    </h3>
+<p class="text-slate-500 text-sm mb-6">Cocokkan data yang diinput siswa dengan pindaian dokumen asli di sebelah kanan.</p>
+<div class="mb-6 p-5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Kartu Keluarga (KK)</h4>
+<p class="text-xs text-slate-500 mt-1">Diupload: 12 Juni 2026, 09:12 WIB</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-success text-white px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 hover:bg-emerald-600">
+<span class="material-symbols-outlined text-sm">check_circle</span> Setuju
+                                </button>
+<button class="bg-danger text-white px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 hover:bg-red-600">
+<span class="material-symbols-outlined text-sm">cancel</span> Tolak
+                                </button>
+</div>
+</div>
+<div class="space-y-3">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-400">No. KK Siswa</p>
+<p class="text-sm font-medium dark:text-slate-200">1701234567890001</p>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-400">Alamat Sesuai KK</p>
+<p class="text-sm font-medium dark:text-slate-200">Jl. Gajah Mada No. 45, Kota Bengkulu</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6 p-5 bg-white dark:bg-slate-800 rounded-xl border-2 border-danger shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Ijazah / SKL</h4>
+<p class="text-xs text-slate-500 mt-1">Diupload: 12 Juni 2026, 09:15 WIB</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-slate-100 dark:bg-slate-700 text-slate-500 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Setuju
+                                </button>
+<button class="bg-danger text-white px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 ring-4 ring-danger/20">
+<span class="material-symbols-outlined text-sm">cancel</span> Ditolak
+                                </button>
+</div>
+</div>
+<div class="mt-4">
+<label class="block text-xs font-bold text-danger uppercase mb-2">Alasan Penolakan (Wajib)</label>
+<textarea class="w-full rounded-lg border-danger dark:bg-slate-900 text-sm focus:ring-danger focus:border-danger" placeholder="Tuliskan alasan penolakan berkas di sini..." rows="3">Scan dokumen tidak jelas/buram, silakan upload ulang dengan pencahayaan yang lebih baik.</textarea>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700">
+<div class="flex items-center justify-between mb-4">
+<h5 class="text-sm font-bold flex items-center gap-2 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-primary text-lg">send</span>
+                                    Kirim Notifikasi Hasil
+                                </h5>
+<div class="flex gap-3">
+<label class="inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-slate-600 peer-checked:bg-whatsapp"></div>
+<span class="ms-2 text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<svg class="size-3.5 text-whatsapp" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                                            WhatsApp
+                                        </span>
+</label>
+<label class="inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+<span class="ms-2 text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">mail</span>
+                                            Email
+                                        </span>
+</label>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900/50 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+<label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Preview Pesan</label>
+<div class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
+                                    "Halo Budi Setiawan, Dokumen Ijazah / SKL Anda ditolak karena: Scan dokumen tidak jelas/buram, silakan upload ulang dengan pencahayaan yang lebih baik."
+                                </div>
+</div>
+<button class="w-full mt-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs font-bold rounded-lg hover:bg-slate-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">send</span>
+                                Kirim Notifikasi Sekarang
+                            </button>
+</div>
+</div>
+<div class="mb-6 p-5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">KIP / Kartu Indonesia Pintar</h4>
+<p class="text-xs text-slate-500 mt-1">Diupload: 13 Juni 2026, 14:02 WIB</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-slate-100 dark:bg-slate-700 text-slate-500 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Setuju
+                                </button>
+<button class="bg-slate-100 dark:bg-slate-700 text-slate-500 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">cancel</span> Tolak
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-200 dark:bg-slate-950 p-8 flex flex-col gap-4 sticky top-[160px]">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-slate-900 dark:text-white font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">visibility</span>
+                        Pratinjau Dokumen: Kartu Keluarga.jpg
+                    </h3>
+<div class="flex gap-2">
+<button class="bg-white dark:bg-slate-800 p-2 rounded shadow hover:bg-slate-50"><span class="material-symbols-outlined">zoom_in</span></button>
+<button class="bg-white dark:bg-slate-800 p-2 rounded shadow hover:bg-slate-50"><span class="material-symbols-outlined">zoom_out</span></button>
+<button class="bg-white dark:bg-slate-800 p-2 rounded shadow hover:bg-slate-50"><span class="material-symbols-outlined">download</span></button>
+</div>
+</div>
+<div class="flex-1 rounded-xl overflow-hidden border border-slate-300 dark:border-slate-800 shadow-2xl relative group">
+<div class="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+<div class="bg-white/90 px-4 py-2 rounded-full text-xs font-bold shadow-lg">Klik untuk perbesar penuh</div>
+</div>
+<div class="w-full h-full bg-white dark:bg-slate-900 flex items-center justify-center p-4">
+<img class="max-w-full max-h-[700px] object-contain shadow-md rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2oGxvhx33LYfNIJn0_4aVx8AspHFYtHIWzsfHkOn4gz7pWbUE2eMyn4RvghgL3qsHgvwwMP9nBhQWxOBKpxiz7s8lW6QMiGwtpWubqJAlxKfh9OaRBIk7gy8zngeX___BkyVSXnHBGGxXr3Hb4aqLhUBmuRa_acEBbIJCGL1h8RfnKfq8aYPtP5dfGKekUNFr2voJYgJWoC0l6jCi1dkijgLCWLP3fkWG0euLln1J7U7a5qVZIhNKnTe-zsPxHfWhoAT1AlH3YGIs"/>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4 mt-2">
+<div class="border-2 border-primary rounded-lg overflow-hidden bg-white cursor-pointer ring-2 ring-primary/20">
+<img class="w-full h-16 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeltN7MMZWGpvLtsLj3jOLCDD_Ivvr8Qa7MiIQ9IfEfegd6TUHD2PJ2gcvmzZiHbjgjcbmWgt9hEB3TzcbtUt_j5ymCmQ2ew6944f68346yLC3bp1AFTykMOtcKKen-xvPGCgSsWgqW5aH7D1aPKwfXyTD55kATZysKdqmr6Ch5f6kuXqajWFhPZCYtDN2Eu2VJXuJT3aKCww0z2fb-umP2dlYRzn8C8Q7NwsVrpWgYeznG785ekTSzbCrkaIgSTDWOKZyX3X41Ryg"/>
+</div>
+<div class="border border-slate-300 rounded-lg overflow-hidden bg-white cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<img class="w-full h-16 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSiZb0vsWopPkN1n5p5GIndqrJCH2hYJm7agryRdkvZxSDstVzCtC1M7NXBYDQ8V9nPiek8YqlVfsXUKEqV4kquItmn7tQbAqdOMZ4yVHfIWztQIH1NnDpfVxan9oMVXrEjrIZI9KIyArHuUn-J9_t4AV4_ywS8C4jO3nTSZhHNvy-lT5LVMKkbQdLTtS3JGBpYhr94gTfJUg-tmXLKuAlgpjDvPDNG7OHYa1Thh6xjTplmAVi6gf7m0htjMPvL8MEj05JbVX8_QJB"/>
+</div>
+<div class="border border-slate-300 rounded-lg overflow-hidden bg-white cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<img class="w-full h-16 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO6blVCMzNCOw6czqWm8ihZ7iJl5Ko1cscRgNTA3d6TNeOmTS9VLirvrxd1lpdOhBxtjp9p7lmbs1qySqC4G8WO6FH89jKuhz9pFgKbT-AmwiYoJRxLVt0xuDnQQqppPa3wag60kt97SeU8I9QTAdjokiJR610hhvqZ6k_7UM4RVskE86NNRTuWgxp1VEX2YDyP6jHXtWhMXTG2lv644XrhlRxrqu_dhkJIAhQtufz1Y10-J6lT3xp9xkTV-Kk79wwxKDPAXCSxct4"/>
+</div>
+<div class="border border-slate-300 rounded-lg overflow-hidden bg-white cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<img class="w-full h-16 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqOKSEC6yy12PpXWFIh7HGJSFCitfqE4WXD3ax_sdgFa_nUoxJ_1lu9FPljUgQewnJ3m_qi4Rro9H_9gFnRhBBnEEtNdEe1Gh5GA3YjLPZPM6hzXbPX1PViRa1tZQJBzkTadkquOfBPnLxeFb8CWUGznXqdvKyzG2ZYPeG7GvRsFpVZFT9DzSX2MXMZzeoHfPVgOPpR_hccJYM03b4MnxvddgADjO9A90-_U-Z1GiZ9JSK8DPko4GOxY7YaUi3K21n5STskECh-kmt"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden mb-10">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<h3 class="text-slate-900 dark:text-white font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">history</span>
+                Riwayat Pemeriksaan
+            </h3>
+</div>
+<div class="p-0 overflow-x-auto">
+<table class="w-full text-left text-sm">
+<thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 font-bold uppercase text-[10px] tracking-widest">
+<tr>
+<th class="px-6 py-4">Waktu</th>
+<th class="px-6 py-4">Petugas Verifikasi</th>
+<th class="px-6 py-4">Status / Tindakan</th>
+<th class="px-6 py-4">Keterangan</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4 text-slate-500 whitespace-nowrap">14 Juni 2026, 15:35</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-[10px]">AS</div>
+<span class="font-medium">Admin SMAN 1 (Andi S.)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-xs font-bold flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-sm">notifications</span> Notifikasi Terkirim
+                        </span>
+</td>
+<td class="px-6 py-4 text-slate-600 dark:text-slate-400">Notifikasi penolakan ijazah dikirim via WhatsApp.</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-slate-500 whitespace-nowrap">14 Juni 2026, 15:30</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-[10px]">AS</div>
+<span class="font-medium">Admin SMAN 1 (Andi S.)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 bg-red-100 text-red-600 rounded text-xs font-bold">Penolakan Berkas</span>
+</td>
+<td class="px-6 py-4 text-slate-600 dark:text-slate-400">Menolak Ijazah: Scan dokumen tidak jelas/buram.</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-slate-500 whitespace-nowrap">12 Juni 2026, 09:00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 font-bold text-[10px]">BS</div>
+<span class="font-medium">Budi Setiawan (Siswa)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 bg-blue-100 text-blue-600 rounded text-xs font-bold">Pendaftaran Awal</span>
+</td>
+<td class="px-6 py-4 text-slate-600 dark:text-slate-400">Siswa melakukan finalisasi data dan unggah dokumen.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<div class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-6 sticky bottom-0 z-40 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="max-w-[1440px] mx-auto flex flex-wrap justify-between items-center gap-6">
+<div class="flex flex-col">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Status Verifikasi Akhir</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-500">pending</span>
+<span class="text-slate-900 dark:text-white font-bold italic">Menunggu seluruh dokumen diverifikasi...</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-3 rounded-xl border border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                Batalkan Verifikasi
+            </button>
+<button class="px-8 py-3 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/25 hover:bg-red-700 transition-colors opacity-50 cursor-not-allowed" disabled="">
+                Finalisasi &amp; Kirim Hasil
+            </button>
+</div>
+</div>
+</div>
+
+</body></html>
